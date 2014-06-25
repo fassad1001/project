@@ -15,7 +15,6 @@ namespace Project
         public Form1()
         {
             InitializeComponent();
-            AccountManager.NewAcc("fassad1001", "fassad1001@3330015");
         }
 
         private void button1_Click(object sender, EventArgs e)
