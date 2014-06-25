@@ -24,12 +24,5 @@ namespace Project
         {
             Password = password;
         }
-        //public void import()
-        //{}
-
-        //public bool export(string login, string pass)
-        //{
-        //    return true;
-        //}
     }
 }
