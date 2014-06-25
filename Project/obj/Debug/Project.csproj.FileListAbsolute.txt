@@ -1,2 +1,13 @@
 E:\Projects\Project\Project\bin\Debug\Project.exe.config
 D:\project\Project\bin\Debug\Project.exe.config
+D:\project\Project\obj\Debug\Project.csprojResolveAssemblyReference.cache
+D:\project\Project\obj\Debug\Project.Properties.Resources.resources
+D:\project\Project\obj\Debug\Project.csproj.GenerateResource.Cache
+D:\project\Project\bin\Debug\Project.exe
+D:\project\Project\bin\Debug\Project.pdb
+D:\project\Project\bin\Debug\EntityFramework.dll
+D:\project\Project\bin\Debug\EntityFramework.SqlServer.dll
+D:\project\Project\bin\Debug\EntityFramework.xml
+D:\project\Project\bin\Debug\EntityFramework.SqlServer.xml
+D:\project\Project\obj\Debug\Project.exe
+D:\project\Project\obj\Debug\Project.pdb

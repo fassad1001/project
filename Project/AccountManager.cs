@@ -6,17 +6,21 @@ using System.Threading.Tasks;
 
 namespace Project
 {
-    class AccountManager
+    static public class AccountManager
     {
-        public void NewAcc(string login, string password)
+        static public void NewAcc(string login, string password)
+        {
+            Account acc = new Account(login, password);
+            var db = new DataBaseUser();
+            db.Accounts.Add(acc);
+            db.SaveChanges();
+            db.Dispose();
+        }
+        static public void RemAcc(string login)
         {
 
         }
-        public void RemAcc(string login)
-        {
-
-        }
-        public void UpdAcc(string oldLogin, string oldPassword, string newLogin, string newPassword)
+        static public void UpdAcc(string oldLogin, string oldPassword, string newLogin, string newPassword)
         {
 
         }
