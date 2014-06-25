@@ -37,14 +37,18 @@ namespace Project
         }
         static public string Register(string login, string password)
         {
+            if (login.Length == 0 || password.Length == 0)
+            {
+                return "{________} <--ЛОГИН\n{________} <--ПАРОЛЬ\n\nОба поля должны быть заполнены!";
+            }
             using (var db = new DataBaseUser())
             {
                 if (db.Accounts.Any(a => a.Login == login))
                 {
-                    return "Use another login! =(";
+                    return "Попробуйте другой логин! =(";
                 }
                 NewAcc(login, password);
-                return "Success, you have successfully signed up! =)";
+                return "Успех! Вы зарегистрировались! =)";
             }
         }
         static public string Login(string login, string password)
@@ -53,11 +57,11 @@ namespace Project
             {
                 if (db.Accounts.Any(a => a.Login == login && a.Password == password))
                 {
-                    return "You are sucesfully Logged! =)";
+                    return "Вы успешно вошли в систему! =)";
                 }
                 else
                 {
-                    return "Login or Password is incorrect!";
+                    return "Логин или пароль неправильный!";
                 }
             }
         }

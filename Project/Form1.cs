@@ -17,5 +17,15 @@ namespace Project
             InitializeComponent();
             AccountManager.NewAcc("fassad1001", "fassad1001@3330015");
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show (AccountManager.Login(loginBox1.Text, passwordBox2.Text));
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(AccountManager.Register(loginBox1.Text, passwordBox2.Text));
+        }
     }
 }
