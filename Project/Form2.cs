@@ -49,5 +49,18 @@ namespace Project
                 IB_text_Panel.AutoScrollPosition.X,
                 vScrollBar1.Value);
         }
+        public int getBegin()
+        {
+            return richTextBox1.SelectionStart;
+        }
+        public int getEnd()
+        {
+            return richTextBox1.SelectionStart + richTextBox1.SelectionLength;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            richTextBox1.Text = getBegin() + ";" + getEnd();
+        }
     }
 }
