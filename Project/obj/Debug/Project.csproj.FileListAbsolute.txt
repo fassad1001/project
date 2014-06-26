@@ -12,3 +12,4 @@ D:\project\Project\bin\Debug\EntityFramework.SqlServer.xml
 D:\project\Project\obj\Debug\Project.exe
 D:\project\Project\obj\Debug\Project.pdb
 D:\project\Project\obj\Debug\Project.Form1.resources
+D:\project\Project\obj\Debug\Project.Form2.resources

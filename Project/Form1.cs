@@ -20,11 +20,19 @@ namespace Project
         private void button1_Click(object sender, EventArgs e)
         {
             MessageBox.Show (AccountManager.Login(loginBox1.Text, passwordBox2.Text));
+            showIBwindow();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             MessageBox.Show(AccountManager.Register(loginBox1.Text, passwordBox2.Text));
+        }
+
+        public void showIBwindow()
+        {
+            Form2 form2 = new Form2();
+            form2.addIB("123 test");
+            form2.ShowDialog();
         }
     }
 }
