@@ -31,7 +31,13 @@ namespace Project
         public void showIBwindow()
         {
             Form2 form2 = new Form2();
-            form2.addIB("123 test");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            form2.addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
             form2.ShowDialog();
         }
     }

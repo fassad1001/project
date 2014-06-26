@@ -20,8 +20,12 @@ namespace Project
         public void addIB(string text)
         {
             TextBox textBox = new TextBox();
-            textBox.Text = text;
             textBox.ReadOnly = true;
+            textBox.Multiline = true;
+            textBox.Width = 380;
+            textBox.Height = 100;
+
+            textBox.Text = text;
             flowLayoutPanel1.Controls.Add(textBox);
         }
     }
