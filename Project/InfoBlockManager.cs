@@ -12,13 +12,40 @@ namespace Project
         {
             return 1;
         }
-        public int getSurenessProcent(int userIntervalBegin, int userIntervalEnd, int programmIntervalBegin, int programmIntervalEnd)
+        public int getSurenessProcent(int IntervalLength, int userIntervalBegin, int userIntervalEnd, int programmIntervalBegin, int programmIntervalEnd)
         {
+            //длинна слова оригинала
+            //суммарный заступ
+            float SummaryIndent;
+            //процент попадания
+            float ProcOfHit;
             //на вход подаются интервалы первый a b это пользовательский
-            //второй это программный на выход отддеётся цифра - процент уверенности
+            //второй это программный на выход отддеётся цифра - процент 
+            if (userIntervalBegin >= programmIntervalBegin && userIntervalEnd >= programmIntervalEnd)
+            {
+                ProcOfHit = (programmIntervalEnd - userIntervalBegin) / IntervalLength;
+                SummaryIndent = (userIntervalEnd - programmIntervalEnd) / IntervalLength;
+            }
+            if (userIntervalBegin <= programmIntervalBegin && userIntervalEnd <= programmIntervalEnd)
+            {
+                ProcOfHit = (userIntervalEnd - programmIntervalBegin) / IntervalLength;
+                SummaryIndent = (programmIntervalBegin - userIntervalBegin) / IntervalLength;
+            }
+            if (userIntervalBegin >= programmIntervalBegin && userIntervalEnd <= programmIntervalEnd)
+            {
+                ProcOfHit = (userIntervalEnd - userIntervalBegin) / IntervalLength;
+                SummaryIndent  = 0;
+            }
+            if (userIntervalBegin <= programmIntervalBegin && userIntervalEnd >= programmIntervalEnd)
+            {
+                ProcOfHit = 1;
+                SummaryIndent = ((programmIntervalBegin - userIntervalBegin) + (programmIntervalEnd - userIntervalEnd)) / IntervalLength;
+            }
+
+            
             return 1;
         }
-        public int getNextIBtext_question()
+        public float getNextIBtext_question()
         {
             //информация на вход бурется из текущего состояния программы
             //берется интервал пользователя, набор программных интервалов
