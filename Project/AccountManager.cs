@@ -8,6 +8,7 @@ namespace Project
 {
     static public class AccountManager
     {
+        static public Account CurrUser { get; set; }
         static public void NewAcc(string login, string password)
         {
             Account acc = new Account(login, password);
@@ -57,12 +58,43 @@ namespace Project
             {
                 if (db.Accounts.Any(a => a.Login == login && a.Password == password))
                 {
+                    CurrUser = db.Accounts.Single(a => a.Login == login && a.Password == password);
                     return "Вы успешно вошли в систему! =)";
                 }
                 else
                 {
                     return "Логин или пароль неправильный!";
                 }
+            }
+        }
+        static public bool HasLogged(string login, string password)
+        {
+            using (var db = new DataBaseUser())
+            {
+                if (db.Accounts.Any(a => a.Login == login && a.Password == password))
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+        }
+        static public bool HasRegistered(string login, string password)
+        {
+            if (login.Length == 0 || password.Length == 0)
+            {
+                return false;
+            }
+            using (var db = new DataBaseUser())
+            {
+                if (db.Accounts.Any(a => a.Login == login))
+                {
+                    return false;
+                }
+                NewAcc(login, password);
+                return true;
             }
         }
     }

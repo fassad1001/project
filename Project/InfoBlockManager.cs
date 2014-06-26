@@ -45,6 +45,20 @@ namespace Project
             
             return 1;
         }
+        public InfoBlock getLastInfoBlock()
+        {
+            using (var db = new DataBaseUser())
+            {
+                return db.History.OrderBy(history => history.Date).Last(a => a.OwnerAccount.Id == AccountManager.CurrUser.Id).OwnerInfoblock;
+            }
+        }
+        public InfoBlock getLastInfoBlock_mainline()
+        {
+            using (var db = new DataBaseUser())
+            {
+                return db.History.OrderBy(history => history.Date).Where(a => a.OwnerAccount.Id == AccountManager.CurrUser.Id).Last(a => a.OwnerInfoblock.Course == AccountManager.CurrUser.CurrCourse).OwnerInfoblock;
+            }
+        }
         public float getNextIBtext_question()
         {
             //информация на вход бурется из текущего состояния программы

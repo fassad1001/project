@@ -11,7 +11,7 @@ namespace Project
         public int Id { get; private set; }
         public string Text { get; private set; }
         public string Pic { get; private set; }
-        public string Course { get; set; }
+        public int Course { get; set; }
 
     }
 }
