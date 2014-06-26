@@ -17,7 +17,7 @@ namespace Project
             InitializeComponent();
         }
 
-        public void addIB(string text)
+        public void addIB_text(string text)
         {
             TextBox textBox = new TextBox();
             textBox.ReadOnly = true;
@@ -25,16 +25,29 @@ namespace Project
             textBox.Width = 380;
             textBox.Height = 100;
 
+            vScrollBar1.Maximum = IB_text_Panel.VerticalScroll.Maximum + 1;
+
             textBox.Text = text;
-            flowLayoutPanel1.Controls.Add(textBox);
+            IB_text_Panel.Controls.Add(textBox);
+        }
+        public void addIB_pic()
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
-            flowLayoutPanel1.AutoScrollPosition = new Point(
-                flowLayoutPanel1.AutoScrollPosition.X,
-                flowLayoutPanel1.VerticalScroll.Maximum);
+            IB_text_Panel.AutoScrollPosition = new Point(
+                IB_text_Panel.AutoScrollPosition.X,
+                IB_text_Panel.VerticalScroll.Maximum);
+            vScrollBar1.Value = vScrollBar1.Maximum;
+        }
+
+        private void vScrollBar1_Scroll(object sender, ScrollEventArgs e)
+        {
+            IB_text_Panel.AutoScrollPosition = new Point(
+                IB_text_Panel.AutoScrollPosition.X,
+                vScrollBar1.Value);
         }
     }
 }
