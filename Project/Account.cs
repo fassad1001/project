@@ -15,6 +15,7 @@ namespace Project
         public int Id { get; private set; }
         public string Login { get; private set; }
         public string Password { get; private set; }
+        public int CurrCourse { get; private set; }
         
         public void SetLogin(string login)
         {
