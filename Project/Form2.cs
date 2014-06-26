@@ -28,5 +28,13 @@ namespace Project
             textBox.Text = text;
             flowLayoutPanel1.Controls.Add(textBox);
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            addIB("123 tesагцщшкавгыщаовылдаовыфджаоt afdfadslkjdfskl;dsfajlk;fdjkljdfkl;afjdl;kkjfkl;ajf;lkjfl;ewkjfl;waekjf;lwkejf;lawekfj;elkwjf;l");
+            flowLayoutPanel1.AutoScrollPosition = new Point(
+                flowLayoutPanel1.AutoScrollPosition.X,
+                flowLayoutPanel1.VerticalScroll.Maximum);
+        }
     }
 }
